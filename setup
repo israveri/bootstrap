@@ -1,0 +1,59 @@
+#! /usr/bin/env ruby
+
+require 'thor'
+
+class Setup < Thor
+  PACKAGES = [
+    'exa',
+    'fzf',
+    'hstr',
+    'tmux',
+    'vim',
+    'zoxide',
+    'zsh',
+    'zsh-antigen'
+  ]
+
+  desc 'all', 'Setup everything'
+  def all
+    dotfiles and packages
+  end
+
+  desc 'dotfiles', 'Links dotfiles to your home directory'
+  def dotfiles
+    Dir.children('dotfiles').each do |filename|
+      if File.exist?("#{Dir.home}/#{filename}")
+        File.delete("#{Dir.home}/#{filename}")
+      end
+
+      File.symlink(
+        "#{Dir.pwd}/dotfiles/#{filename}",
+        "#{Dir.home}/#{filename}"
+      )
+    end
+  end
+
+  desc 'packages', 'Installs applications from official repository'
+  def packages
+    update_packages
+    upgrade_packages
+
+    system("sudo apt install --yes #{packages_list}")
+  end
+
+  private
+
+  def update_packages
+    system("sudo apt update")
+  end
+
+  def upgrade_packages
+    system("sudo apt upgrade")
+  end
+
+  def packages_list
+    PACKAGES.join(' ')
+  end
+end
+
+Setup.start
