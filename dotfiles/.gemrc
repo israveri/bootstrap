@@ -1,0 +1,7 @@
+---
+gem: --no-rdoc --no-ri
+:backtrace: false
+:verbose: true
+:concurrent_downloads: 3
+:sources:
+- http://rubygems.org

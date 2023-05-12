@@ -1,0 +1,18 @@
+# system
+alias reload="source $HOME/.zshrc && echo 'Shell reloaded. :)'"
+
+alias ..="cd .."
+alias ...="cd ../.."
+alias ls="exa --header --long --git --classify --group-directories-first --color=always"
+alias lst="ls --tree --level=2"
+alias lsa="ls --all"
+
+# Utilities
+alias grep="grep --color=always"
+
+# bundler
+alias be="bundle exec"
+alias bi="bundle install"
+alias bl="bundle list"
+alias bo="bundle open"
+alias bu="bundle update"
