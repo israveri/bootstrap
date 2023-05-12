@@ -5,6 +5,7 @@ require 'thor'
 class Setup < Thor
   PACKAGES = [
     'exa',
+    'command-not-found',
     'fzf',
     'hstr',
     'tmux',
@@ -95,5 +96,11 @@ class Setup < Thor
     PACKAGES.join(' ')
   end
 end
+
+# Little trick to prompt the user for sudo
+# to cache the authentication so we don't
+# need to prompt the password in the middle
+# of execution
+system("sudo env 1> /dev/null")
 
 Setup.start
