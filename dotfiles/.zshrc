@@ -2,23 +2,7 @@
 # Antigen
 ####################
 source /usr/share/zsh-antigen/antigen.zsh
-
-# Oh My Zsh
-antigen use oh-my-zsh
-antigen theme dracula/zsh dracula
-
-# Bundles
-antigen bundle zsh-users/zsh-autosuggestions
-antigen bundle git
-antigen bundle ssh-agent
-antigen bundle asdf
-antigen bundle zsh-users/zsh-syntax-highlighting
-
-# Syntax highlighting
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets pattern)
-
-# Apply changes
-antigen apply
+antigen init ~/.antigenrc
 
 ####################
 # Variables
