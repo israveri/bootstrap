@@ -14,12 +14,11 @@
 ####################
 # Antigen
 ####################
-source ~/.antigen/antigen.zsh
+source /usr/share/zsh-antigen/antigen.zsh
 
 # Oh My Zsh
 antigen use oh-my-zsh
 antigen theme dracula/zsh dracula
-#antigen theme robbyrussell
 
 # Bundles
 antigen bundle zsh-users/zsh-syntax-highlighting
