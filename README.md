@@ -30,9 +30,14 @@ This tool installs the following applications when prompted:
 
 # Running
 
-To symlink your dotfiles run:
+The simplest way to install everything:
 
-    # ./setup.rb dotfiles
+    # ./setup all
+
+You can alse install only a subset of the available setups:
+
+    # ./setup dotfiles
+    # ./setup packages
 
 [antigen]:   https://antigen.sharats.me/
 [exa]:       https://the.exa.website/
