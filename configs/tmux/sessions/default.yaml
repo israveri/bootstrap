@@ -1,0 +1,10 @@
+session_name: default
+windows:
+  - window_name: metrics
+    panes:
+      - ytop
+  - window_name: zsh
+    focus: true
+    panes:
+      - shell_command:
+        start_directory: "~"

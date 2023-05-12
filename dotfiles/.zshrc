@@ -12,8 +12,14 @@ antigen bundle colored-man-pages
 antigen bundle colorize
 antigen bundle command-not-found
 antigen bundle dotenv
+antigen bundle encode64
+antigen bundle extract
 antigen bundle git
+antigen bundle heroku
+antigen bundle httpie
 antigen bundle ssh-agent
+antigen bundle sudo
+antigen bundle tmux
 
 # Load bundles from external repos
 antigen bundle zsh-users/zsh-completions
@@ -59,6 +65,8 @@ eval "$(starship init zsh)"
 eval "$(zoxide init zsh)"
 
 # Autostart Tmux
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmux new-session -A -s default
-fi
+# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+#   tmux new-session -A -s default
+# fi
+tmuxp load ~/.config/tmux/sessions/default.yaml -d
+tmux attach -t default
