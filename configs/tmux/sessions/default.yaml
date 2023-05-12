@@ -3,7 +3,7 @@ windows:
   - window_name: metrics
     panes:
       - ytop
-  - window_name: zsh
+  - window_name: ""
     focus: true
     panes:
       - shell_command:

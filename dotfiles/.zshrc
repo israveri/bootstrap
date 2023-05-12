@@ -64,9 +64,13 @@ eval "$(starship init zsh)"
 # Start zoxide
 eval "$(zoxide init zsh)"
 
-# Autostart Tmux
-# if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#   tmux new-session -A -s default
-# fi
-tmuxp load ~/.config/tmux/sessions/default.yaml -d
-tmux attach -t default
+# Tmux
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+  # tmux new-session -A -s default
+  tmuxp load ~/.config/tmux/sessions/default.yaml -d
+  tmuxp load ~/.config/tmux/sessions/zee/storefront.yaml -d
+  tmuxp load ~/.config/tmux/sessions/zee/dispatch.yaml -d
+  tmuxp load ~/.config/tmux/sessions/zee/stock.yaml -d
+  tmuxp load ~/.config/tmux/sessions/zee/petz.yaml -d
+  tmux attach -t default
+fi

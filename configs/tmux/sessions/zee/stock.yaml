@@ -1,0 +1,6 @@
+session_name: stock
+start_directory: ~/Workspace/zee/stock
+windows:
+  - window_name: ""
+    panes:
+      -
