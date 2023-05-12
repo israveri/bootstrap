@@ -16,12 +16,40 @@ class Setup < Thor
 
   desc 'all', 'Setup everything'
   def all
-    dotfiles and packages
+    puts "-> Bootstraping development environment"
+    puts ""
+
+    dotfiles
+    packages
   end
 
   desc 'dotfiles', 'Links dotfiles to your home directory'
   def dotfiles
+    puts "-> Linking dotfiles"
+
+    create_symlinks
+
+    puts ""
+  end
+
+  desc 'packages', 'Installs applications from official repository'
+  def packages
+    puts "-> Installing packages"
+
+    update_packages
+    upgrade_packages
+    install_packages
+
+    puts ""
+    puts "-> Done. Don't forget to `reload` the shell to apply changes!"
+  end
+
+  private
+
+  def create_symlinks
     Dir.children('dotfiles').each do |filename|
+      print "[ ] Symlinking #{filename}"
+
       if File.exist?("#{Dir.home}/#{filename}")
         File.delete("#{Dir.home}/#{filename}")
       end
@@ -30,25 +58,37 @@ class Setup < Thor
         "#{Dir.pwd}/dotfiles/#{filename}",
         "#{Dir.home}/#{filename}"
       )
+
+      print "\r[✔] Symlinking #{filename}"
+      puts ""
     end
   end
 
-  desc 'packages', 'Installs applications from official repository'
-  def packages
-    update_packages
-    upgrade_packages
-
-    system("sudo apt install --yes #{packages_list}")
-  end
-
-  private
-
   def update_packages
-    system("sudo apt update")
+      print "[ ] Updating available packages list"
+
+      system("sudo apt update", [:out, :err] => File::NULL)
+
+      print "\r[✔] Updating available packages list"
+      puts ""
   end
 
   def upgrade_packages
-    system("sudo apt upgrade")
+    print "[ ] Upgrading installed packages"
+
+    system("sudo apt upgrade", [:out, :err] => File::NULL)
+
+    print "\r[✔] Upgrading installed packages"
+    puts ""
+  end
+
+  def install_packages
+    print "[ ] Installing defined packages"
+
+    system "sudo apt install --yes #{packages_list}", [:out, :err] => File::NULL
+
+    print "\r[✔] Installing defined packages"
+    puts ""
   end
 
   def packages_list
