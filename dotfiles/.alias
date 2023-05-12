@@ -1,5 +1,5 @@
 # system
-alias reload="source $HOME/.zshrc && echo 'Shell reloaded. :)'"
+alias reload="exec zsh"
 
 alias ..="cd .."
 alias ...="cd ../.."
