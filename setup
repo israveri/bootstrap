@@ -97,11 +97,11 @@ class Setup < Thor
   end
 
   def install_packages
-    print "[ ] Installing defined packages"
+    print "[ ] Installing packages"
 
     system "sudo apt install --yes #{PACKAGES.join(' ')}", [:out, :err] => File::NULL
 
-    print "\r[✔] Installing defined packages"
+    print "\r[✔] Installing packages"
     puts ""
   end
 
