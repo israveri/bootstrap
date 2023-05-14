@@ -24,6 +24,9 @@ class Setup < Thor
 
     dotfiles
     packages
+    configs
+
+    puts "-> Done. Don't forget to `reload` the shell to apply changes!"
   end
 
   desc 'dotfiles', 'Links dotfiles to your home directory'
@@ -44,7 +47,15 @@ class Setup < Thor
     install_packages
 
     puts ""
-    puts "-> Done. Don't forget to `reload` the shell to apply changes!"
+  end
+
+  desc 'configs', 'Links application config files to ~/.config folder'
+  def configs
+    puts "-> Linking configs"
+
+    create_configs
+
+    puts ""
   end
 
   private
@@ -96,6 +107,27 @@ class Setup < Thor
 
   def packages_list
     PACKAGES.join(' ')
+  end
+
+  def create_configs
+    Dir.glob("configs/*")
+    .select { |f| File.directory? f }
+    .each do |dir|
+        print "[ ] Symlinking #{File.basename dir}"
+
+        if File.exist? "#{Dir.home}/.config/#{File.basename dir}"
+          File.delete "#{Dir.home}/.config/#{File.basename dir}"
+        end
+
+        File.symlink(
+          "#{Dir.pwd}/#{dir}",
+          "#{Dir.home}/.config/#{File.basename dir}"
+        )
+
+        print "\r[✔] Symlinking #{File.basename dir}"
+      end
+
+      puts ""
   end
 end
 

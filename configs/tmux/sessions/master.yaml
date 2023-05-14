@@ -2,9 +2,9 @@ session_name: default
 windows:
   - window_name: metrics
     panes:
-      - ytop
+      - btm
   - window_name: ""
+    start_directory: "~"
     focus: true
     panes:
-      - shell_command:
-        start_directory: "~"
+      - neofetch

@@ -67,7 +67,7 @@ eval "$(zoxide init zsh)"
 # Tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   # tmux new-session -A -s default
-  tmuxp load ~/.config/tmux/sessions/default.yaml -d
+  tmuxp load ~/.config/tmux/sessions/master.yaml -d
   tmuxp load ~/.config/tmux/sessions/zee/storefront.yaml -d
   tmuxp load ~/.config/tmux/sessions/zee/dispatch.yaml -d
   tmuxp load ~/.config/tmux/sessions/zee/stock.yaml -d
