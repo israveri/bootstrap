@@ -134,7 +134,7 @@ end
 # Little trick to prompt the user for sudo
 # to cache the authentication so we don't
 # need to prompt the password in the middle
-# of execution
+# of execution and mess up the pretty output
 system("sudo env 1> /dev/null")
 
 Setup.start
