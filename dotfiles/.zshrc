@@ -72,5 +72,5 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
   tmuxp load ~/.config/tmux/sessions/zee/dispatch.yaml -d
   tmuxp load ~/.config/tmux/sessions/zee/stock.yaml -d
   tmuxp load ~/.config/tmux/sessions/zee/petz.yaml -d
-  tmux attach -t default
+  tmux attach -t master
 fi

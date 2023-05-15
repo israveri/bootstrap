@@ -1,4 +1,4 @@
-session_name: default
+session_name: master
 windows:
   - window_name: metrics
     panes:
