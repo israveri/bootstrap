@@ -22,12 +22,5 @@ module Bootstrap
 
       puts ""
     end
-
-    # private
-
-    # def create_configs
-
-
-    # end
   end
 end

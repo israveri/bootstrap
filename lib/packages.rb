@@ -14,7 +14,6 @@ module Bootstrap
       'zsh-antigen'
     ]
 
-    # desc 'packages', 'Installs applications from official repository'
     def packages
       puts "-> Installing packages"
 
