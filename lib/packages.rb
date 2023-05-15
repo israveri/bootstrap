@@ -6,6 +6,7 @@ module Bootstrap
       'fzf',
       'hstr',
       'httpie',
+      'tldr',
       'tmux',
       'tmuxp',
       'vim',
