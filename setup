@@ -4,23 +4,25 @@ require 'thor'
 
 Dir.glob("lib/**/*").each { |f| require File.expand_path(f, Dir.pwd) }
 
-class Setup < Thor
-  desc 'all', 'Setup everything'
-  def all
-    puts "-> Bootstraping development environment"
-    puts ""
+module Bootstrap
+  class Setup < Thor
+    desc 'all', 'Setup everything'
+    def all
+      puts "-> Bootstraping development environment"
+      puts ""
 
-    dotfiles
-    packages
-    configs
+      invoke :dotfiles
+      invoke :packages
+      invoke :configs
 
-    puts ""
-    puts "-> Done. Don't forget to `reload` the shell to apply changes!"
+      puts ""
+      puts "-> Done. Don't forget to `reload` the shell to apply changes!"
+    end
+
+    register(Bootstrap::Dotfiles, "dotfiles", "dotfiles", "Links dotfiles to your home directory")
+    register(Bootstrap::Packages, "packages", "packages", "Installs applications from official repository")
+    register(Bootstrap::Configs,  "configs", "configs", "Links application config files to ~/.config folder")
   end
-
-  register(Bootstrap::Dotfiles, "dotfiles", "dotfiles", "Links dotfiles to your home directory")
-  register(Bootstrap::Packages, "packages", "packages", "Installs applications from official repository")
-  register(Bootstrap::Configs,  "configs", "configs", "Links application config files to ~/.config folder")
 end
 
 # Little trick to prompt the user for sudo
@@ -29,4 +31,4 @@ end
 # of execution and mess up the pretty output
 system("sudo env 1> /dev/null")
 
-Setup.start
+Bootstrap::Setup.start
