@@ -1,4 +1,5 @@
 session_name: zee
+start_directory: "~/Workspace/zee/"
 windows:
   - window_name: "main"
     start_directory: "~"
@@ -6,30 +7,30 @@ windows:
     panes:
       -
   - window_name: storefront
-    start_directory: "~/workspace/zee/storefront"
+    start_directory: "storefront"
     panes:
       -
   - window_name: dispatch
-    start_directory: "~/workspace/zee/dispatch"
+    start_directory: "dispatch"
     panes:
       -
   - window_name: stock
-    start_directory: "~/workspace/zee/stock"
+    start_directory: "stock"
     panes:
       -
   - window_name: petz
-    start_directory: "~/workspace/zee/petz"
+    start_directory: "petz"
     panes:
       -
   - window_name: portal
-    start_directory: "~/workspace/zee/portal"
+    start_directory: "portal"
     panes:
       -
   - window_name: authy
-    start_directory: "~/workspace/zee/authy"
+    start_directory: "authy"
     panes:
       -
   - window_name: ifood
-    start_directory: "~/workspace/zee/ifood"
+    start_directory: "ifood"
     panes:
       -

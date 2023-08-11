@@ -5,3 +5,7 @@ windows:
     focus: true
     panes:
       - neofetch
+  - window_name: "bootstrap"
+    start_directory: "~/Workspace/bootstrap"
+    panes:
+      -

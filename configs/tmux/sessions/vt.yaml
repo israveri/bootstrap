@@ -1,4 +1,5 @@
 session_name: "vt"
+start_directory: "~/Workspace/vt/"
 windows:
   - window_name: "main"
     start_directory: "~"
