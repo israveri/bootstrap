@@ -1,6 +1,0 @@
-session_name: dispatch
-start_directory: ~/Workspace/zee/dispatch
-windows:
-  - window_name: ""
-    panes:
-      -

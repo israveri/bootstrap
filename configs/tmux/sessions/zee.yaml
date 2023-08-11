@@ -1,0 +1,35 @@
+session_name: Zee
+windows:
+  - window_name: "home"
+    start_directory: "~"
+    focus: true
+    panes:
+      -
+  - window_name: Storefront
+    start_directory: "~/Workspace/zee/storefront"
+    panes:
+      -
+  - window_name: Dispatch
+    start_directory: "~/Workspace/zee/dispatch"
+    panes:
+      -
+  - window_name: Stock
+    start_directory: "~/Workspace/zee/stock"
+    panes:
+      -
+  - window_name: Petz
+    start_directory: "~/Workspace/zee/petz"
+    panes:
+      -
+  - window_name: Portal
+    start_directory: "~/Workspace/zee/portal"
+    panes:
+      -
+  - window_name: Authy
+    start_directory: "~/Workspace/zee/authy"
+    panes:
+      -
+  - window_name: iFood
+    start_directory: "~/Workspace/zee/ifood"
+    panes:
+      -

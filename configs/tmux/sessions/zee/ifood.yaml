@@ -1,6 +1,0 @@
-session_name: ifood
-start_directory: ~/Workspace/zee/ifood
-windows:
-  - window_name: ""
-    panes:
-      -

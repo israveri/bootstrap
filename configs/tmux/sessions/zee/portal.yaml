@@ -1,6 +1,0 @@
-session_name: portal
-start_directory: ~/Workspace/zee/portal
-windows:
-  - window_name: ""
-    panes:
-      -

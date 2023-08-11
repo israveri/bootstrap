@@ -1,6 +1,0 @@
-session_name: storefront
-start_directory: ~/Workspace/zee/storefront
-windows:
-  - window_name: ""
-    panes:
-      -

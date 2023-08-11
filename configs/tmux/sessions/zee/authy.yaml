@@ -1,6 +1,0 @@
-session_name: authy
-start_directory: ~/Workspace/zee/authy
-windows:
-  - window_name: ""
-    panes:
-      -
