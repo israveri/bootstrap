@@ -1,4 +1,4 @@
-session_name: main
+session_name: personal
 windows:
   - window_name: "main"
     start_directory: "~"

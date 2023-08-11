@@ -1,35 +1,35 @@
-session_name: Zee
+session_name: zee
 windows:
-  - window_name: "home"
+  - window_name: "main"
     start_directory: "~"
     focus: true
     panes:
       -
-  - window_name: Storefront
-    start_directory: "~/Workspace/zee/storefront"
+  - window_name: storefront
+    start_directory: "~/workspace/zee/storefront"
     panes:
       -
-  - window_name: Dispatch
-    start_directory: "~/Workspace/zee/dispatch"
+  - window_name: dispatch
+    start_directory: "~/workspace/zee/dispatch"
     panes:
       -
-  - window_name: Stock
-    start_directory: "~/Workspace/zee/stock"
+  - window_name: stock
+    start_directory: "~/workspace/zee/stock"
     panes:
       -
-  - window_name: Petz
-    start_directory: "~/Workspace/zee/petz"
+  - window_name: petz
+    start_directory: "~/workspace/zee/petz"
     panes:
       -
-  - window_name: Portal
-    start_directory: "~/Workspace/zee/portal"
+  - window_name: portal
+    start_directory: "~/workspace/zee/portal"
     panes:
       -
-  - window_name: Authy
-    start_directory: "~/Workspace/zee/authy"
+  - window_name: authy
+    start_directory: "~/workspace/zee/authy"
     panes:
       -
-  - window_name: iFood
-    start_directory: "~/Workspace/zee/ifood"
+  - window_name: ifood
+    start_directory: "~/workspace/zee/ifood"
     panes:
       -

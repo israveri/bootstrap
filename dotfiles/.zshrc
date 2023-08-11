@@ -67,9 +67,9 @@ eval "$(zoxide init zsh)"
 # Tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
   # tmux new-session -A -s default
-  tmuxp load ~/.config/tmux/sessions/main.yaml -d
+  tmuxp load ~/.config/tmux/sessions/personal.yaml -d
   tmuxp load ~/.config/tmux/sessions/zee.yaml -d
   tmuxp load ~/.config/tmux/sessions/vt.yaml -d
 
-  tmux attach -t main
+  tmux attach -t personal
 fi

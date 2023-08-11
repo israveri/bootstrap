@@ -1,6 +1,6 @@
-session_name: "VT"
+session_name: "vt"
 windows:
-  - window_name: "home"
+  - window_name: "main"
     start_directory: "~"
     focus: true
     panes:
