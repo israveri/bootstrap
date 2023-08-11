@@ -9,7 +9,7 @@ You need the following to run this tool:
 * [Ruby][ruby]
 
 # Applications
-
+==
 This tool installs the following applications when prompted:
 
 | Application            | Description                    |
@@ -27,6 +27,7 @@ This tool installs the following applications when prompted:
 | [tmux][tmux]           | Terminal Multiplexer           |
 | [tmuxp][tmuxp]         | Session Manager for Tmux       |
 | [httpie][httpie]       | A Better `curl` Command        |
+| [bottom][bottom]       | A Better `top` Command         |
 
 # Running
 
@@ -40,6 +41,7 @@ You can alse install only a subset of the available setups:
     # ./setup packages
 
 [antigen]:   https://antigen.sharats.me/
+[bottom]:    https://github.com/ClementTsang/bottom#bottom
 [exa]:       https://the.exa.website/
 [fzf]:       https://github.com/junegunn/fzf#-
 [httpie]:    https://httpie.io/
