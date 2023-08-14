@@ -73,3 +73,7 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 
   tmux attach -t personal
 fi
+
+# Haskell
+export PATH="$HOME/.ghcup/bin:$PATH"
+[ -f "/home/israel/.ghcup/env" ] && source "/home/israel/.ghcup/env"
