@@ -6,3 +6,8 @@ windows:
     focus: true
     panes:
       -
+
+  - window_name: "varsitytutors"
+    start_directory: "vt"
+    panes:
+      -
