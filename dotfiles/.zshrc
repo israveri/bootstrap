@@ -44,7 +44,7 @@ export EDITOR=vim
 ####################
 # Alias
 ####################
-source ~/.alias
+source $HOME/.alias
 
 # HSTR
 setopt histignorespace
@@ -66,16 +66,16 @@ eval "$(zoxide init zsh)"
 
 # Tmux
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-  tmuxp load ~/.config/tmux/sessions/personal.yaml -d
-  tmuxp load ~/.config/tmux/sessions/zee.yaml -d
-  tmuxp load ~/.config/tmux/sessions/vt.yaml -d
+  tmuxp load $HOME/.config/tmux/sessions/personal.yaml -d
+  tmuxp load $HOME/.config/tmux/sessions/zee.yaml -d
+  tmuxp load $HOME/.config/tmux/sessions/vt.yaml -d
 
   tmux attach -t personal
 fi
 
 # Haskell
 export PATH="$HOME/.ghcup/bin:$PATH"
-[ -f "/home/israel/.ghcup/env" ] && source "/home/israel/.ghcup/env"
+[ -f "$HOME/.ghcup/env" ] && source "$HOME/.ghcup/env"
 
 # Source local (not shared) custom configs if they exist
 [ -f "$HOME/.custom" ] && source "$HOME/.custom"
