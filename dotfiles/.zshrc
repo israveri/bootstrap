@@ -76,3 +76,6 @@ fi
 # Haskell
 export PATH="$HOME/.ghcup/bin:$PATH"
 [ -f "/home/israel/.ghcup/env" ] && source "/home/israel/.ghcup/env"
+
+# Source local (not shared) custom configs if they exist
+[ -f "$HOME/.custom" ] && source "$HOME/.custom"
