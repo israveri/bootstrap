@@ -1,11 +1,11 @@
 session_name: personal
 windows:
-  - window_name: "main"
+  - window_name: "home"
     start_directory: "~"
     focus: true
     panes:
       - neofetch
-  - window_name: "bootstrap"
-    start_directory: "~/Workspace/bootstrap"
+  - window_name: "dotfiles"
+    start_directory: "~/.dotfiles"
     panes:
       -
