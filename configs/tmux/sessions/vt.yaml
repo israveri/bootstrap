@@ -8,6 +8,6 @@ windows:
       -
 
   - window_name: "varsitytutors"
-    start_directory: "vt"
+    start_directory: "~/Workspace/vt/varsitytutors"
     panes:
       -
