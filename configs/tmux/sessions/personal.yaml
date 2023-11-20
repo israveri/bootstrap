@@ -5,7 +5,7 @@ windows:
     focus: true
     panes:
       - neofetch
-  - window_name: "dotfiles"
-    start_directory: "~/.dotfiles"
+  - window_name: "bootstrap"
+    start_directory: "~/Workspace/bootstrap"
     panes:
       -
