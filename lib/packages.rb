@@ -1,9 +1,11 @@
 module Bootstrap
   class Packages < Thor::Group
     MANIFEST = [
-      'exa',
       'command-not-found',
+      'curl',
+      'exa',
       'fzf',
+      'git',
       'hstr',
       'httpie',
       'tldr',
@@ -11,8 +13,8 @@ module Bootstrap
       'tmuxp',
       'vim',
       'zoxide',
-      'zsh',
-      'zsh-antigen'
+      'zsh-antigen',
+      'zsh'
     ]
 
     def packages
