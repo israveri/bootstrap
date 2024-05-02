@@ -6,6 +6,6 @@ windows:
     panes:
       - neofetch
   - window_name: "bootstrap"
-    start_directory: "~/Workspace/bootstrap"
+    start_directory: "~/.dotfiles"
     panes:
       -
