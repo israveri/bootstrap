@@ -42,7 +42,7 @@ module Bootstrap
     def upgrade_packages
       print "[ ] Upgrading installed packages"
 
-      system("sudo apt upgrade", [:out, :err] => File::NULL)
+      system("sudo apt upgrade --yes", [:out, :err] => File::NULL)
 
       print "\r[✔] Upgrading installed packages"
       puts ""
