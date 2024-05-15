@@ -8,6 +8,7 @@ module Bootstrap
       'git',
       'hstr',
       'httpie',
+      'silversearcher-ag',
       'tldr',
       'tmux',
       'tmuxp',
