@@ -1,8 +1,9 @@
 #! /usr/bin/env ruby
 
+require 'pry'
 require 'thor'
 
-Dir.glob("lib/**/*").each { |f| require File.expand_path(f, Dir.pwd) }
+Dir.glob("lib/**/*.rb").each { |f| require File.expand_path(f, Dir.pwd) }
 
 module Bootstrap
   class Setup < Thor
@@ -13,6 +14,7 @@ module Bootstrap
 
       invoke :dotfiles
       invoke :packages
+      invoke :applications
       invoke :configs
 
       puts ""
@@ -21,6 +23,7 @@ module Bootstrap
 
     register(Bootstrap::Dotfiles, "dotfiles", "dotfiles", "Links dotfiles to your home directory")
     register(Bootstrap::Packages, "packages", "packages", "Installs applications from official repository")
+    register(Bootstrap::Applications, "applications", "applications", "Installs applications using custom scripts")
     register(Bootstrap::Configs,  "configs", "configs", "Links application config files to ~/.config folder")
   end
 end
