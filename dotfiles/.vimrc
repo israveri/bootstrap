@@ -92,7 +92,7 @@ let g:lightline = {
 """""""""""""""""""""""""""
 " Ag - The Silver Searcher
 """""""""""""""""""""""""""
-let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+let g:ctrlp_user_command = 'ag %s -l --nocolor --hidden -g ""'
 let g:ctrlp_use_caching = 0
 nnoremap <F3> :Ag!<Space>
 
