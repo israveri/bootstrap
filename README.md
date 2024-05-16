@@ -31,7 +31,11 @@ This tool installs the following applications when prompted:
 
 # Running
 
-The simplest way to install everything:
+To setup the script you first need to install all dependencies:
+
+    # bundle install
+
+After that, the simplest way to install everything:
 
     # ./setup all
 
@@ -39,6 +43,10 @@ You can alse install only a subset of the available setups:
 
     # ./setup dotfiles
     # ./setup packages
+
+To see all available commands:
+
+    # ./setup help
 
 [antigen]:   https://antigen.sharats.me/
 [bottom]:    https://github.com/ClementTsang/bottom#bottom
