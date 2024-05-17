@@ -1,9 +1,6 @@
 #! /usr/bin/env ruby
 
-require 'pry'
-require 'thor'
-
-Dir.glob("lib/**/*.rb").each { |f| require File.expand_path(f, Dir.pwd) }
+require_relative 'environment'
 
 module Bootstrap
   class Setup < Thor
