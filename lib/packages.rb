@@ -31,29 +31,29 @@ module Bootstrap
     private
 
     def update_packages
-      print "[ ] Updating available packages list"
+      print ".. Updating available packages list"
 
       system("sudo apt update", [:out, :err] => File::NULL)
 
-      print "\r[✔] Updating available packages list"
+      print "\r✅ Updating available packages list"
       puts ""
     end
 
     def upgrade_packages
-      print "[ ] Upgrading installed packages"
+      print ".. Upgrading installed packages"
 
       system("sudo apt upgrade --yes", [:out, :err] => File::NULL)
 
-      print "\r[✔] Upgrading installed packages"
+      print "\r✅ Upgrading installed packages"
       puts ""
     end
 
     def install_packages
-      print "[ ] Installing packages"
+      print ".. Installing packages"
 
       system "sudo apt install --yes #{MANIFEST.join(' ')}", [:out, :err] => File::NULL
 
-      print "\r[✔] Installing packages"
+      print "\r✅ Installing packages"
       puts ""
     end
   end

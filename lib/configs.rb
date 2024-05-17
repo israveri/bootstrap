@@ -6,7 +6,7 @@ module Bootstrap
       Dir.glob("configs/*")
         .select { |f| File.directory? f }
         .each do |dir|
-            print "[ ] Symlinking #{File.basename dir}"
+            print ".. Symlinking #{File.basename dir}"
 
             if File.exist? "#{Dir.home}/.config/#{File.basename dir}"
               File.delete "#{Dir.home}/.config/#{File.basename dir}"
@@ -17,7 +17,7 @@ module Bootstrap
               "#{Dir.home}/.config/#{File.basename dir}"
             )
 
-            print "\r[✔] Symlinking #{File.basename dir}"
+            print "\r✅ Symlinking #{File.basename dir}"
           end
 
       puts ""
