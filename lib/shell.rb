@@ -5,11 +5,18 @@ module Bootstrap
     DEFAULT_DOWNLOAD_DIR = '/tmp'
 
     def run(command, *args)
-      system(command, *args)
+      system(command, [:out, :err] => File::NULL)
     end
 
     def download(url, filename:, at: DEFAULT_DOWNLOAD_DIR)
       run("curl -sLo #{at + '/' + filename} #{url}")
+    end
+
+    def clone_repository(repo, to:, branch: nil)
+      command = "git clone #{repo} #{to}"
+      command << " --branch #{branch}" if branch
+
+      run(command)
     end
 
     def make_executable(filename)
