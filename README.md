@@ -14,11 +14,12 @@ This tool installs the following applications when prompted:
 
 | Application            | Description                    |
 |------------------------|--------------------------------|
-| [antigen][antigen]     | Zsh Plugins Manager            |
-| [bottom][bottom]       | A Better `top` Command         |
-| [exa][exa]             | A Better `ls` Command          |
+| [antigen][antigen]     | Zsh Plugin Manager             |
+| [asdf][asdf]           | A runtime version manager      |
+| [bottom][bottom]       | A Better `top`                 |
+| [exa][exa]             | A Better `ls`                  |
 | [fzf][fzf]             | A Command Line Fuzzy Finder    |
-| [httpie][httpie]       | A Better `curl` Command        |
+| [httpie][httpie]       | A Better `curl`                |
 | [hstr][hstr]           | Command History Search Tool    |
 | [nerdfonts][nerdfonts] | Fonts with icons and ligatures |
 | [oh-my-zsh][oh-my-zsh] | Zsh Management Framework       |
@@ -27,8 +28,18 @@ This tool installs the following applications when prompted:
 | [tmux][tmux]           | Terminal Multiplexer           |
 | [tmuxp][tmuxp]         | Session Manager for Tmux       |
 | [vim][vim]             | Terminal Text Editor           |
-| [zoxide][zoxide]       | A Better `cd` Command          |
+| [zoxide][zoxide]       | A Better `cd`                  |
 | [zsh][zsh]             | Unix Shell Application         |
+
+# Programming Languages
+
+This script will install the following programming languages through asdf's version management:
+
+| Language             | Version            |
+|----------------------|--------------------|
+| Node                 | 22.2.0             |
+| Python               | 3.12.3             |
+| Ruby                 | 3.3.1              |
 
 # Running
 
@@ -50,6 +61,7 @@ To see all available commands:
     # ./setup help
 
 [antigen]:   https://antigen.sharats.me/
+[asdf]:      https://asdf-vm.com/
 [bottom]:    https://github.com/ClementTsang/bottom#bottom
 [exa]:       https://the.exa.website/
 [fzf]:       https://github.com/junegunn/fzf#-
