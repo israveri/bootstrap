@@ -3,7 +3,7 @@ module Bootstrap
     class Overmind
       def initialize
         @app_name     = 'overmind'
-        @version      = ENV.fetch('OVERMIND') { '2.5.1' }
+        @version      = '2.5.1'
         @filename     = "overmind-v#{@version}-linux-amd64.gz"
         @download_url = "https://github.com/DarthSim/overmind/releases/download/v#{@version}/#{@filename}"
       end
