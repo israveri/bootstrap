@@ -5,7 +5,7 @@ module Bootstrap
         @version        = '0.14.0'
         @repo_name      = "https://github.com/asdf-vm/asdf.git"
         @branch         = "v#{@version}"
-        @install_locale = "~/.asdf_2"
+        @install_locale = "~/.asdf"
 
         @languages = {
           ruby:   { version: "3.3.1",  url: "https://github.com/asdf-vm/asdf-ruby.git" },
