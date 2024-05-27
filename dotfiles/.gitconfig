@@ -34,6 +34,7 @@
   b            = branch
   bd           = branch -D
   c            = commit
+  cleanup      = ! git branch | grep -v -e "main" -e "master" -e "staging" -e "production" | xargs git branch -D
   cm           = commit -m
   cma          = commit -ma
   d            = diff
